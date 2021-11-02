@@ -1,0 +1,21 @@
+.navbar {
+
+    display: flex;
+    justify-content: space-between;
+    & div {
+        flex-basis: 20%;
+        font-size: 2rem;
+    }
+
+    & nav {
+        flex-basis: 80%;
+
+        & ul {
+            display: flex;
+
+            & li {
+                list-style: none;
+            }
+        }
+    }
+}
