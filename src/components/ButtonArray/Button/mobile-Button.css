@@ -1,0 +1,53 @@
+@media (max-width: 500px) {
+    button {
+        all: unset
+    }
+
+    .container-btn-array-col {
+        display: none;
+    }
+
+    .container-btn-array-row {
+        border-bottom: 2px solid rgba(151, 151, 151, 0.2);
+        display: flex;
+    }
+
+    .container-btn-array-row > * {
+        flex-basis: calc(100% / 3);
+    }
+    .container-btn-array-row button {
+        display: flex;
+        justify-content: center;
+    }
+
+    .container-btn-array-row button span {
+        display: none;
+    }
+
+    .container-btn-array-row button a {
+        text-decoration: none;
+        font-weight: 700;
+        padding: 15px 0;
+        color: rgba(151, 151, 151, 0.5);
+        text-transform: uppercase;
+        font-size: 9px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .btn-active {
+        position: relative;
+    }
+
+    .btn-active::after {
+        background-color: #419ebb;
+        content: "";
+        width: 50%;
+        height: 4px;
+        position: absolute;
+        bottom: -2px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
