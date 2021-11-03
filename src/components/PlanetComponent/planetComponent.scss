@@ -1,0 +1,17 @@
+.planet-container {
+    background-color: #070724;
+    background-image: url('./background-stars.svg');
+    @media (min-width: 943px) {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10%;
+    }
+    @media (max-width: 942px) {
+        display: flex;
+        flex-direction: column;
+    }
+    @media (max-width: 500px) {
+        display: flex;
+        flex-direction: column;
+    }
+}
