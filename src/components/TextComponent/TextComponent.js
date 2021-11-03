@@ -12,7 +12,7 @@ const TextComponent = (props) => {
         <div class="planet-info">
             <h2>{planet}</h2>
             <p>{description}</p>
-            <h3>Source: <a href={source}>Wikipedia<img src={arrow}/></a></h3>
+            <h3>Source: <a href={source} target="_blank">Wikipedia<img src={arrow}/></a></h3>
         </div>
     )
 }

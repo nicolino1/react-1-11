@@ -2,11 +2,17 @@
     & > div:nth-child(2) {
         display: flex;
         
-        & > img {
+        .image-container {
             flex-basis: 65%;
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            img {
+                height: 60%;
+            }
         }
 
-        & > div {
+        .text-container {
             flex-basis: 35%;
         }
     }
@@ -17,11 +23,27 @@
         & > div {
             flex-basis: 20%;
         }
-
-        @media (max-width: 480px){
+        @media (max-width: 480px){           
             display: block;
           }
     }
+}
+.planet-text {
+    @media (min-width: 943px) {
+        display: flex;
 
-    
+    }
+    @media (max-width: 942px) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.text-container {
+    @media (max-width: 500px) {
+        display: flex;
+        flex-direction: column;
+    }
+    @media (max-width: 942px) {
+        display: flex;
+    }
 }
