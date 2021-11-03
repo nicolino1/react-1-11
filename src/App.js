@@ -4,11 +4,11 @@ import CardInfo from './components/CardInfo/cardInfo';
 import Navbar from './components/Navbar/navbar';
 
 function App() {
-  const planetas = ["Mercurio", "Venus", "Tierra"]
+  const planetas = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
 
   return (
     <div className="App">
-      <Navbar title="Planets" elements={planetas}/>
+      <Navbar title="The Planets" elements={planetas}/>
       <CardInfo title="hola" description="como va"/>
     </div>
   );

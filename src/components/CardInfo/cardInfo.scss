@@ -1,10 +1,20 @@
+:root {
+   --ff-primary: 'Spartan', sans-serif;
+   --ff-secondary: 'Antonio', sans-serif;
+   --fs-100: 0.6875rem;
+   --fs-400: 0.875rem; 
+   --fs-800: 2.5rem;
+   --fs-900: 5rem;
+ }
+
 .cardInfo {
     border: 1px solid grey;
-    width: 272px;
-    height: 127px;
+    width: 20%;
     font-weight: bold;
     text-align: start;
     padding: 15px 15px 30px;
+    margin: 20px;
+    text-transform: uppercase;
 
      h2, p {
         margin: 0;
@@ -14,11 +24,38 @@
      h2 {
         margin: 0 0 15px;
         color: gray;
-        font-size: 1rem;
+        font-size: var(--fs-400);
+        font-family: var(--ff-primary);
+        
      };
 
      p {
-        color: white;
-        font-size: 3rem; 
+        color: grey;
+        font-size: var(--fs-800); 
+        font-family: var(--ff-secondary);
+
+        @media all and (min-width: 481px) and (max-width: 811px) {
+         font-size: var(--fs-400); 
+       }
+   
+       @media (max-width: 750px){
+         font-size: var(--fs-100); 
+       }
+
+
      }; 
+
+     @media (max-width: 480px){
+      display: flex;
+      width: 80vw;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+
+      h2 {
+         margin: 0;
+      }
+    }
+
+
 }
