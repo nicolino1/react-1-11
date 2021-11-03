@@ -2,7 +2,7 @@ import React , {useState} from 'react';
 import "./css/navbar.scss";
 
 const Navbar = (props) => {
-    const { title, elements } = props;
+    const { title, elements, onClick } = props;
     const [isOpen, setIsOpen] = useState(false);
 
     return (
@@ -13,7 +13,7 @@ const Navbar = (props) => {
             </div>
             <nav>
                 <ul>
-                   {elements.map((element) => <li><a>{element}</a></li>)}
+                   {elements.map((element) => <li><a onClick={() => onClick(element)}>{element}</a></li>)}
                 </ul>
             </nav>
             <button id="hamburger" onClick={() => setIsOpen(!isOpen)}>
@@ -27,7 +27,7 @@ const Navbar = (props) => {
                 <ul>
                 {elements.map((element) => 
                 <li>
-                    <a>
+                    <a onClick={() => {onClick(element); setIsOpen(!isOpen)}}>
                         <span></span>
                         {element}
                         <i class="fas fa-chevron-right" alt></i>

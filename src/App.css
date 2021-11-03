@@ -1,3 +1,8 @@
+body {
+  background-color: #070724;
+  background-image: url("assets/background-stars.svg");
+}
+
 .App {
   text-align: center;
 }

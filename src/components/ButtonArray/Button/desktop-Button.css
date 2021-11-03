@@ -1,3 +1,19 @@
+:root {
+    --blue-grey: #38384F;
+    --blue-dark: #070724;
+    --blue-light: #2d68f0;
+    --blue-lighter: #419EBB;
+    --cyan: #1ec2a4;
+    --grey: #838391;
+    --yellow: #EDA249;
+    --purple: #6f2ed6;
+    --red-light: #D14C32;
+    --red: #D83A34;
+    --orange: #CD5120;
+    --ff-primary: 'Spartan', sans-serif;
+    --ff-secondary: 'Antonio', sans-serif;
+  }
+
 @media (min-width: 501px) {
     .container-btn-array-row {
         display: none;
@@ -6,7 +22,7 @@
     .container-btn-array-col {
         display: flex;
         flex-direction: column;
-        align-items: center;
+
         justify-content: center;
     }
     
@@ -16,7 +32,7 @@
     
     .info-button {
         margin-bottom: 20px;
-        width: 30%;
+        width: 90%;
         text-align: left;
     }
     
@@ -37,12 +53,42 @@
         opacity: 0.5;
         margin-right: 15px;
     }
-    
-    .btn-active {
-        background-color: #419ebb;
+
+    .btn-active-mercury {
+        background-color: var(--blue-lighter);
     }
+    .btn-active-venus {
+        background-color: var(--yellow);
+    }
+    .btn-active-earth {
+        background-color:  var(--purple);
+    }
+    .btn-active-mars {
+        background-color: var(--red-light);
+    }
+    .btn-active-jupiter {
+        background-color:  var(--red);
+    }
+    .btn-active-saturn {
+        background-color: var(--orange);
+    }
+    .btn-active-uranus {
+        background-color: var(--cyan);
+    }
+    .btn-active-neptune {
+        background-color:  var(--blue-lighter);
+    }
+
     
-    .nav-btn:not(.btn-active):hover {
+    .nav-btn:not(
+        .btn-active-venus, 
+        .btn-active-mercury, 
+        .btn-active-earth, 
+        .btn-active-mars,
+        .btn-active-jupiter,
+        .btn-active-saturn,
+        .btn-active-uranus,
+        .btn-active-neptune  ):hover {
         cursor: pointer;
         background-color: rgba(216, 216, 216, 0.2);
         border: none;

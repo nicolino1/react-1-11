@@ -1,3 +1,19 @@
+:root {
+    --blue-grey: #38384F;
+    --blue-dark: #070724;
+    --blue-light: #2d68f0;
+    --blue-lighter: #419EBB;
+    --cyan: #1ec2a4;
+    --grey: #838391;
+    --yellow: #EDA249;
+    --purple: #6f2ed6;
+    --red-light: #D14C32;
+    --red: #D83A34;
+    --orange: #CD5120;
+    --ff-primary: 'Spartan', sans-serif;
+    --ff-secondary: 'Antonio', sans-serif;
+  }
+
 @media (max-width: 500px) {
     button {
         all: unset
@@ -36,12 +52,106 @@
         justify-content: center;
     }
 
-    .btn-active {
+
+
+    .btn-active-mercury {
         position: relative;
     }
+    .btn-active-venus {
+        position: relative;
+    }
+    .btn-active-earth {
+        position: relative;
+    }
+    .btn-active-mars {
+        position: relative;
+    }
+    .btn-active-jupiter {
+        position: relative;
+    }
+    .btn-active-saturn {
+        position: relative;
+    }
+    .btn-active-uranus {
+        position: relative;
+    }
+    .btn-active-neptune {
+        position: relative;
+        
+    }
 
-    .btn-active::after {
-        background-color: #419ebb;
+    .btn-active-mercury::after {
+        background-color: var(--blue-lighter);
+        content: "";
+        width: 50%;
+        height: 4px;
+        position: absolute;
+        bottom: -2px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .btn-active-venus::after {
+        background-color: var(--yellow);
+        content: "";
+        width: 50%;
+        height: 4px;
+        position: absolute;
+        bottom: -2px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .btn-active-earth::after {
+        background-color:  var(--purple);
+        content: "";
+        width: 50%;
+        height: 4px;
+        position: absolute;
+        bottom: -2px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .btn-active-mars::after {
+        background-color: var(--red-light);
+        content: "";
+        width: 50%;
+        height: 4px;
+        position: absolute;
+        bottom: -2px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .btn-active-jupiter::after {
+        background-color:  var(--red);
+        content: "";
+        width: 50%;
+        height: 4px;
+        position: absolute;
+        bottom: -2px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .btn-active-saturn::after {
+        background-color: var(--orange);
+        content: "";
+        width: 50%;
+        height: 4px;
+        position: absolute;
+        bottom: -2px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .btn-active-uranus::after {
+        background-color: var(--cyan);
+        content: "";
+        width: 50%;
+        height: 4px;
+        position: absolute;
+        bottom: -2px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .btn-active-neptune::after {
+        background-color:  var(--blue-lighter);
         content: "";
         width: 50%;
         height: 4px;

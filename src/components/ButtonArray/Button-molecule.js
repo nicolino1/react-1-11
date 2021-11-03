@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import ButtonAtom from './Button/Button-atom';
 
-export default function Button_molecule() {
+export default function ButtonMolecule({onClick, classPlanet}) {
     const [isActive1, setIsActive1] = useState(false);
     const [isActive2, setIsActive2] = useState(false);
     const [isActive3, setIsActive3] = useState(false);
@@ -13,6 +13,7 @@ export default function Button_molecule() {
                     setIsActive1(true);
                     setIsActive2(false);
                     setIsActive3(false);
+                    onClick(number);
                 }
                 break;
             case "02":
@@ -20,6 +21,7 @@ export default function Button_molecule() {
                     setIsActive2(true);
                     setIsActive1(false);
                     setIsActive3(false);
+                    onClick(number);
                 }
                 break;
             case "03":
@@ -27,6 +29,7 @@ export default function Button_molecule() {
                     setIsActive3(true);
                     setIsActive1(false);
                     setIsActive2(false);
+                    onClick(number);
                 }
                 break;
         }
@@ -34,7 +37,7 @@ export default function Button_molecule() {
 
     return (
         <>
-            <div class='container-btn-array-col' style={{ backgroundColor: 'black' }}>
+            <div class='container-btn-array-col' >
                 <ButtonAtom
                     id="01"
                     isActive={isActive1}
@@ -42,6 +45,7 @@ export default function Button_molecule() {
                     number="01"
                     content="overview"
                     clicked={clickHandler}
+                    classPlanet={classPlanet}
                 />
                 <ButtonAtom
                     id="02"
@@ -50,6 +54,7 @@ export default function Button_molecule() {
                     number="02"
                     content="internal structure"
                     clicked={clickHandler}
+                    classPlanet={classPlanet}
                 />
                 <ButtonAtom
                     id="03"
@@ -58,10 +63,11 @@ export default function Button_molecule() {
                     number="03"
                     content="surface geology"
                     clicked={clickHandler}
+                    classPlanet={classPlanet}
                 />
             </div>
 
-            <div class='container-btn-array-row' style={{ backgroundColor: 'black' }}>
+            <div class='container-btn-array-row'>
                 <ButtonAtom
                     id="01"
                     isActive={isActive1}
@@ -69,6 +75,7 @@ export default function Button_molecule() {
                     number="01"
                     content="overview"
                     clicked={clickHandler}
+                    classPlanet={classPlanet}
                 />
                 <ButtonAtom
                     id="02"
@@ -77,6 +84,7 @@ export default function Button_molecule() {
                     number="02"
                     content="structure"
                     clicked={clickHandler}
+                    classPlanet={classPlanet}
                 />
                 <ButtonAtom
                     id="03"
@@ -85,6 +93,7 @@ export default function Button_molecule() {
                     number="03"
                     content="surface"
                     clicked={clickHandler}
+                    classPlanet={classPlanet}
                 />
             </div>
         </>
