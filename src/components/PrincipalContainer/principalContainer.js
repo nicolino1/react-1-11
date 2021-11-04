@@ -198,6 +198,10 @@ const PrincipalContainer = (props) => {
         <div className="principal">
             <Navbar title="the planets" elements={solarSystem} onClick={onChangePlanet}/>
             <div className="planet-text">
+                <div className="buttonmobile">
+                    <ButtonMolecule className="btn-molecule" onClick={handleOnClick} classPlanet={actualPlanet}/>
+                </div>
+                
                 <div className="image-container">
                     <img src={images && images[seleccionado]} alt="planet"></img>
                 </div>

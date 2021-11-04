@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import ButtonAtom from './Button/Button-atom';
+import PropTypes from 'prop-types';
 
-export default function ButtonMolecule({onClick, classPlanet}) {
+const ButtonMolecule = ({onClick, classPlanet}) => {
     const [isActive1, setIsActive1] = useState(false);
     const [isActive2, setIsActive2] = useState(false);
     const [isActive3, setIsActive3] = useState(false);
@@ -99,4 +100,11 @@ export default function ButtonMolecule({onClick, classPlanet}) {
         </>
     );
 }
+
+ButtonMolecule.propTypes = {
+    onClick: PropTypes.func,
+    classPlanet: PropTypes.string
+}
+
+export default ButtonMolecule;
 

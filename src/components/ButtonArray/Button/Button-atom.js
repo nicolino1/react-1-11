@@ -1,7 +1,8 @@
 import './mobile-Button.css';
 import './desktop-Button.css';
+import PropTypes from 'prop-types';
 
-export default function ButtonAtom (props){
+const ButtonAtom = (props) => {
     const { isActive, href, number, content, clicked, classPlanet } = props;
     console.log(classPlanet);
     return (
@@ -19,4 +20,15 @@ export default function ButtonAtom (props){
         </button>
     );
 }
+
+ButtonAtom.propTypes = {
+    isActive: PropTypes.bool,
+    href: PropTypes.string,
+    number: PropTypes.string, 
+    content: PropTypes.string, 
+    clicked: PropTypes.func, 
+    classPlanet: PropTypes.string
+}
+
+export default ButtonAtom;
 

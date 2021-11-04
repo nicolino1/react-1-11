@@ -1,5 +1,6 @@
 import React , {useState} from 'react';
 import "./css/navbar.scss";
+import PropTypes from 'prop-types';
 
 const Navbar = (props) => {
     const { title, elements, onClick } = props;
@@ -39,5 +40,11 @@ const Navbar = (props) => {
 
     )
 } 
+
+Navbar.propTypes = {
+    title: PropTypes.string,
+    elements: PropTypes.array,
+    onclick: PropTypes.func
+}
 
 export default Navbar;
