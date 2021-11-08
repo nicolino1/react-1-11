@@ -22,7 +22,7 @@
     .container-btn-array-col {
         display: flex;
         flex-direction: column;
-
+        margin:auto;
         justify-content: center;
     }
     
